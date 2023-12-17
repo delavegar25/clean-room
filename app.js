@@ -25,6 +25,10 @@ function handleMarkDoneOrNotDone() {
     notCompletedIcon.classList.add(HIDDEN);
 
     loadingSpinner.classList.remove(HIDDEN);
+
+    setTimeout(() => {
+        completedIcon.classList.remove(HIDDEN);
+    }, 3000);
 }
 
 checkboxButton.addEventListener('click', handleMarkDoneOrNotDone);
