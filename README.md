@@ -3,7 +3,7 @@
 ### Animation
 
 In this project, i'm to create a delightful user experience. 
-- 
+
 Built a Checkbox button using css and javascript and added some aria attributes to make it seamless for the user.
 
 The checkbox has three svgs which are:
