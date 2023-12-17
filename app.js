@@ -4,6 +4,7 @@ function app() {
 // 3 seconds later, show the checked icon
 // get the button and icons
 
+const HIDDEN = 'hidden';
 
 const checkboxButton = document.querySelector('#shopping-item-checkbox');
 console.log(checkboxButton);
@@ -19,5 +20,13 @@ const loadingSpinner = checkboxButton.querySelector('#loading-spinner-icon');
 console.log(loadingSpinner);
 
 }
+
+function handleMarkDoneOrNotDone() {
+    notCompletedIcon.classList.add(HIDDEN);
+
+    loadingSpinner.classList.remove(HIDDEN);
+}
+
+checkboxButton.addEventListener('click', handleMarkDoneOrNotDone);
 
 app();
