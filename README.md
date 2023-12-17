@@ -1,5 +1,6 @@
-**Clean your room Project
-**Animation
+###Clean your room Project
+
+###Animation
 
 In this project, i'm to create a delightful user experience. 
 - 
