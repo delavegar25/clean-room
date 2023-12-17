@@ -352,6 +352,7 @@ template {
 
 body{
     font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #f1f1f1;
 }
 
 /*animation */
@@ -360,16 +361,32 @@ body{
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
 }
 
 
+@keyframes zoom-in-spin {
+    from {
+        transform: scale(0) rotate(270deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1) rotate(360deg);
+        opacity: 1;
+    }
+}
+
 h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 130%;
 }
 
 .shopping-item {
@@ -377,7 +394,11 @@ h1{
     align-items: center;
     gap: 32px;
     justify-content: space-around;
-    border: 0px 0px 9.98px 0px;
+    border: 0px 0px 0px 0px;
+    padding: 8px;
+    border-radius: 6px;
+    background: #b5b5b5;
+    margin-top: 53px;
 }
 
 
@@ -387,9 +408,12 @@ h1{
     border: none;
     border-radius: 12px;
 
-    height: 128px;
-    width: 128px;
+    height: 58px;
+    width: 58px;
 
+    margin-right: auto;
+    margin-top: 30px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -405,8 +429,15 @@ h1{
    outline-offset: 4px;
 }
 
+.shopping-item-label {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 28px;
+    margin-top: 25px;
+    margin-right: 870px;
+}
+
 .shopping-item-checkbox:focus .not-completed-icon circle {
-    fill: #d9d9d9;
+    fill: #e4a4a4;
     stroke-dasharray: 0 0;
 }
 
@@ -420,13 +451,13 @@ h1{
 
 .not-completed-icon,
 .completed-icon {
-    width: 128px;
-    height: 128px;
+    width: 58px;
+    height: 58px;
 }
 
 .loading-spinner-icon {
-    width: 100px;
-    height: 100px;
+    width: 58px;
+    height: 58px;
 
     animation-duration: 1000ms;
     animation-name: spin;
@@ -434,3 +465,8 @@ h1{
     animation-timing-function: linear;
 }
 
+.completed-icon {
+    animation-name: zoom-in-spin;
+    animation-duration: 300ms;
+    animation-timing-function: linear;
+}

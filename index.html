@@ -18,12 +18,15 @@
 
         <h1 tabindex="0">The User experience</h1>
         <div class="shopping-item" tabindex="0">
-        <button class="shopping-item-checkbox" id="shopping-item-checkbox" aria-label="shopping-item-button">
+            <span id="shopping-item-checkbox-status" aria-live="polite"></span>
+        <button class="shopping-item-checkbox" id="shopping-item-checkbox" aria-label="Mark clean your room as done">
+            
             <!--not-completed-->
            
               <svg
               class="not-completed-icon"
               id="not-completed-icon"
+              aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -46,6 +49,7 @@
               <svg
               class="completed-icon hidden"
               id="completed-icon"
+              aria-hidden="true"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -64,6 +68,7 @@
               <svg
               class="loading-spinner-icon hidden"
               id="loading-spinner-icon"
+              aria-hidden="true"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -80,11 +85,16 @@
               </svg>
 
             </button>
+
+            <span class="shopping-item-label">
+                Clean your room 
+            </span>
+            
         </div>
 
     </nav>
 
 
-    <script src="./app.css"></script>
+    <script src="./app.js"></script>
 </body>
 </html>
