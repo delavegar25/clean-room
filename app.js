@@ -6,9 +6,17 @@ function app() {
 
 
 const checkboxButton = document.querySelector('#shopping-item-checkbox');
+console.log(checkboxButton);
+
+const notCompletedIcon = checkboxButton.querySelector('#not-completed-icon');
+console.log(notCompletedIcon);
+
+const completedIcon = checkboxButton.querySelector('#completed-icon');
+console.log(completedIcon);
 
 
-
+const loadingSpinner = checkboxButton.querySelector('#loading-spinner-icon');
+console.log(loadingSpinner);
 
 }
 
